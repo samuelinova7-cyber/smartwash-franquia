@@ -141,18 +141,28 @@ export default function App() {
               <span className="inline-block bg-lavender/10 text-lavender px-4 py-1.5 rounded-full text-sm font-bold mb-6 tracking-wide uppercase">
                 Oportunidade de Franquia de Sucesso
               </span>
-              <h1 className="text-4xl md:text-6xl font-black text-deep-navy leading-[1.1] mb-8">
-                Transforme seu futuro com a <span className="text-vibrant-blue">SmartWash</span>
+              <h1 className="text-4xl md:text-6xl font-black text-deep-navy leading-[1.1] mb-6">
+                Invista em uma lavanderia <span className="text-vibrant-blue">self-service automatizada</span>
               </h1>
-              <p className="text-lg md:text-xl text-deep-navy/70 mb-10 font-medium leading-relaxed">
-                Já com duas unidades em operação, a SmartWash é a escolha certa para quem busca um negócio rentável e inovador.
+              <p className="text-lg md:text-xl text-deep-navy/70 mb-6 font-medium leading-relaxed">
+                Franquia a partir de R$75 mil, operação compacta e retorno estimado entre 18 e 24 meses.
               </p>
+              <div className="flex flex-col gap-3 mb-10">
+                <div className="flex items-center gap-3 text-deep-navy font-bold text-lg">
+                  <div className="w-2 h-2 bg-vibrant-blue rounded-full"></div>
+                  Margem estimada de 60%
+                </div>
+                <div className="flex items-center gap-3 text-deep-navy font-bold text-lg">
+                  <div className="w-2 h-2 bg-vibrant-blue rounded-full"></div>
+                  Espaço a partir de 15 m²
+                </div>
+              </div>
               <div className="flex flex-col sm:flex-row items-center gap-4">
                 <a 
                   href="#formulario" 
                   className="w-full sm:w-auto bg-vibrant-blue text-white px-10 py-5 rounded-full font-black text-lg hover:scale-105 transition-all shadow-vibrant flex items-center justify-center gap-2"
                 >
-                  QUERO SER UM FRANQUEADO <ArrowRight size={20} />
+                  QUERO CONHECER A FRANQUIA <ArrowRight size={20} />
                 </a>
                 <a 
                   href="https://wa.me/5571999115133" 
@@ -196,6 +206,31 @@ export default function App() {
         </div>
       </header>
 
+      {/* Números da Franquia Section */}
+      <section className="py-16 bg-vibrant-blue text-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 relative z-10">
+          <h2 className="text-3xl md:text-5xl font-black mb-12 text-center">Números da Franquia SmartWash</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <p className="text-white/70 font-bold uppercase tracking-wider mb-2 text-sm">Investimento inicial</p>
+              <p className="text-3xl md:text-4xl font-black">A partir de R$75 mil</p>
+            </div>
+            <div>
+              <p className="text-white/70 font-bold uppercase tracking-wider mb-2 text-sm">Payback médio</p>
+              <p className="text-3xl md:text-4xl font-black">18 a 24 meses</p>
+            </div>
+            <div>
+              <p className="text-white/70 font-bold uppercase tracking-wider mb-2 text-sm">Margem estimada</p>
+              <p className="text-3xl md:text-4xl font-black">Cerca de 60%</p>
+            </div>
+            <div>
+              <p className="text-white/70 font-bold uppercase tracking-wider mb-2 text-sm">Espaço necessário</p>
+              <p className="text-3xl md:text-4xl font-black">A partir de 15 m²</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Mercado Section (Proposta de Valor) */}
       <section id="mercado" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
@@ -225,15 +260,12 @@ export default function App() {
             </div>
             <div className="relative">
               <div className="section-rounded overflow-hidden shadow-2xl">
-                <video 
-                  autoPlay 
-                  muted 
-                  loop 
-                  playsInline
+                <img 
+                  src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/WhatsApp%20Image%202026-03-07%20at%207.23.42%20PM.jpeg" 
+                  alt="Fachada SmartWash" 
                   className="w-full h-full object-cover"
-                >
-                  <source src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-3a0a1927-f826-45f2-b16b-79c31d1f4429.mp4" type="video/mp4" />
-                </video>
+                  referrerPolicy="no-referrer"
+                />
               </div>
               <div className="absolute -bottom-10 -left-10 glass p-8 section-rounded shadow-xl hidden lg:block max-w-xs">
                 <p className="font-bold text-vibrant-blue mb-2 italic">"O futuro do serviço é o autoatendimento."</p>
@@ -247,44 +279,59 @@ export default function App() {
       {/* Rentabilidade Section */}
       <section id="diferenciais" className="py-20 bg-soft-ice">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black mb-6">A Engenharia da Rentabilidade</h2>
-            <p className="text-lg text-deep-navy/70 max-w-3xl mx-auto font-medium leading-relaxed">
-              Investir na SmartWash é investir em um negócio com alto potencial de retorno. Nossos franqueados têm experimentado um crescimento consistente, com um retorno sobre o investimento em média de 18 a 24 meses. No curto prazo, os franqueados podem esperar uma margem de lucro de 20% a 25%, e no longo prazo, a estabilidade e o crescimento são garantidos.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <h2 className="text-3xl md:text-5xl font-black mb-6">Por que investir na SmartWash</h2>
+              <p className="text-lg text-deep-navy/70 font-medium leading-relaxed">
+                Investir na SmartWash é investir em um negócio com alto potencial de retorno. Nossos franqueados têm experimentado um crescimento consistente, com um retorno sobre o investimento em média de 18 a 24 meses. No curto prazo, os franqueados podem esperar uma margem de lucro de 50% a 60%, e no longo prazo, a estabilidade e o crescimento são garantidos.
+              </p>
+            </div>
+            <div className="relative">
+              <div className="section-rounded overflow-hidden shadow-2xl border-8 border-white">
+                <video 
+                  autoPlay 
+                  muted 
+                  loop 
+                  playsInline
+                  className="w-full aspect-square object-cover"
+                >
+                  <source src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-3a0a1927-f826-45f2-b16b-79c31d1f4429.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                icon: <Zap className="text-vibrant-blue" />,
-                title: "Operação Enxuta",
-                desc: "Modelo self-service que dispensa funcionários na maior parte do tempo. Folha de pagamento ZERO."
-              },
-              {
-                icon: <Droplets className="text-vibrant-blue" />,
-                title: "Tecnologia UV",
-                desc: "Máquinas industriais de alta performance com esterilização UV, garantindo máxima higiene."
-              },
-              {
                 icon: <ShieldCheck className="text-vibrant-blue" />,
-                title: "Insumos Premium",
-                desc: "Parceria com marcas líderes (OMO e Comfort Profissional) com doseamento automático."
+                title: "Modelo de negócio validado",
+                desc: "Unidades operando com sucesso, provando a rentabilidade e a aceitação do público."
               },
               {
                 icon: <Smartphone className="text-vibrant-blue" />,
-                title: "Gestão 100% Digital",
-                desc: "Controle faturamento, máquinas e câmeras em tempo real diretamente do seu celular."
+                title: "Operação automatizada",
+                desc: "Gestão 100% digital. Controle faturamento, máquinas e câmeras em tempo real pelo celular."
               },
               {
-                icon: <Clock className="text-vibrant-blue" />,
-                title: "Conveniência 24h",
-                desc: "O negócio nunca para. Sua loja gera receita constante, dia e noite, 7 dias por semana."
+                icon: <Users className="text-vibrant-blue" />,
+                title: "Baixa necessidade de equipe",
+                desc: "Modelo self-service que dispensa funcionários na maior parte do tempo. Folha de pagamento reduzida."
+              },
+              {
+                icon: <TrendingUp className="text-vibrant-blue" />,
+                title: "Alta demanda recorrente",
+                desc: "Serviço essencial com clientes que retornam semanalmente, garantindo receita previsível."
+              },
+              {
+                icon: <MapPin className="text-vibrant-blue" />,
+                title: "Estrutura compacta",
+                desc: "Operação otimizada que exige espaços a partir de apenas 15 m², reduzindo custos de aluguel."
               },
               {
                 icon: <BarChart3 className="text-vibrant-blue" />,
                 title: "Alta Margem",
-                desc: "Baixo custo fixo e alta demanda garantem margens de lucro entre 40% e 50%."
+                desc: "Baixo custo fixo e alta demanda garantem margens de lucro entre 50% e 60%."
               }
             ].map((item, idx) => (
               <motion.div 
@@ -375,8 +422,8 @@ export default function App() {
                 img: "https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/WhatsApp%20Image%202026-03-07%20at%207.23.42%20PM.jpeg"
               },
               {
-                title: "Shopping & Galerias",
-                desc: "Aproveite o fluxo constante de centros comerciais.",
+                title: "Condomínios e Hotéis",
+                desc: "Aproveite os baixos custos operacionais em áreas privadas.",
                 img: "https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/WhatsApp%20Image%202026-03-07%20at%207.23.42%20PM%20(2).jpeg"
               },
               {
@@ -456,11 +503,11 @@ export default function App() {
             />
             <FAQItem 
               question="5. Qual é o valor do investimento inicial?" 
-              answer="O investimento inicial varia de acordo com o modelo de negócio escolhido e o tamanho do ponto comercial. Em média, a partir de R$ 90 mil você já pode ter sua unidade SmartWash operando."
+              answer="O investimento inicial varia de acordo com o modelo de negócio escolhido e o tamanho do ponto comercial. Em média, a partir de R$ 75 mil você já pode ter sua unidade SmartWash operando."
             />
             <FAQItem 
               question="6. Qual é a margem de lucro e o tempo de retorno?" 
-              answer="Nossos franqueados têm experimentado uma margem de lucro de 20% a 25% no curto prazo, com um retorno sobre o investimento (Payback) estimado entre 18 a 24 meses."
+              answer="Nossos franqueados têm experimentado uma margem de lucro de 50% a 60% no curto prazo, com um retorno sobre o investimento (Payback) estimado entre 18 a 24 meses."
             />
             <FAQItem 
               question="7. Como funciona a manutenção das máquinas?" 
