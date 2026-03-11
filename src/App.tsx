@@ -85,7 +85,7 @@ const Navbar = () => {
 
 const WhatsAppButton = () => (
   <a 
-    href="https://wa.me/5571999999999" 
+    href="https://wa.me/5571999115133" 
     target="_blank" 
     rel="noopener noreferrer"
     className="fixed bottom-8 right-8 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center"
@@ -155,7 +155,7 @@ export default function App() {
                   QUERO SER UM FRANQUEADO <ArrowRight size={20} />
                 </a>
                 <a 
-                  href="https://wa.me/5571999999999" 
+                  href="https://wa.me/5571999115133" 
                   className="w-full sm:w-auto bg-white text-deep-navy px-10 py-5 rounded-full font-black text-lg hover:bg-medium-gray/50 transition-all border border-medium-gray flex items-center justify-center gap-2"
                 >
                   Falar com Consultor
@@ -412,9 +412,9 @@ export default function App() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { name: "Brotas (Matriz)", loc: "Shopping Florestal", rating: "5.0 ⭐", badge: "Matriz Consolidada" },
+              { name: "Brotas", loc: "Shopping Florestal", rating: "5.0 ⭐", badge: "Franquia em Operação" },
               { name: "Santa Teresa", loc: "Posto de Combustível 24h", rating: "4.9 ⭐", badge: "Franquia em Operação" },
-              { name: "Pituba", loc: "Edifício Comercial Premium", rating: "5.0 ⭐", badge: "Franquia em Operação" }
+              { name: "Pituba (Matriz)", loc: "Edifício Comercial Premium", rating: "5.0 ⭐", badge: "Matriz Consolidada" }
             ].map((unidade, i) => (
               <div key={i} className="bg-white p-8 section-rounded shadow-sm border border-medium-gray relative overflow-hidden">
                 <div className="absolute top-0 right-0 bg-vibrant-blue text-white text-[10px] font-black px-4 py-1 rounded-bl-xl uppercase tracking-wider">
@@ -519,7 +519,7 @@ export default function App() {
               </p>
               
               <a 
-                href="https://forms.google.com" 
+                href="https://forms.gle/xQRf5heFFcQDkvgF8" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full bg-vibrant-blue text-white py-5 rounded-full font-black text-xl shadow-vibrant hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2"
@@ -535,39 +535,47 @@ export default function App() {
       </section>
 
       {/* Link para Site Oficial */}
-      <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 -z-10">
-          <video 
-            autoPlay 
-            muted 
-            loop 
-            playsInline
-            className="w-full h-full object-cover opacity-30"
-          >
-            <source src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-d2eaac15-1cf9-4362-b13a-04d777a840a5.mp4" type="video/mp4" />
-          </video>
-          <div className="absolute inset-0 bg-deep-navy/80"></div>
-        </div>
-        
-        <div className="max-w-7xl mx-auto px-4 text-center text-white">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-5xl font-black mb-6">Quer conhecer a experiência do cliente?</h2>
-            <p className="text-xl text-white/70 mb-10 max-w-2xl mx-auto font-medium">
-              Visite nosso site oficial e veja como a SmartWash está revolucionando o dia a dia de milhares de pessoas em Salvador.
-            </p>
-            <a 
-              href="https://smartwash.com.br" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white text-vibrant-blue px-10 py-5 rounded-full font-black text-lg hover:scale-105 transition-all shadow-2xl"
+      <section className="py-24 bg-deep-navy text-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
             >
-              VISITAR SITE OFICIAL <ArrowRight size={20} />
-            </a>
-          </motion.div>
+              <h2 className="text-3xl md:text-5xl font-black mb-6">Quer conhecer a experiência do cliente?</h2>
+              <p className="text-xl text-white/70 mb-10 font-medium leading-relaxed">
+                Visite nosso site oficial e veja como a SmartWash está revolucionando o dia a dia de milhares de pessoas em Salvador.
+              </p>
+              <a 
+                href="https://smartwash-red.vercel.app/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-white text-vibrant-blue px-10 py-5 rounded-full font-black text-lg hover:scale-105 transition-all shadow-2xl"
+              >
+                VISITAR SITE OFICIAL <ArrowRight size={20} />
+              </a>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="section-rounded overflow-hidden shadow-2xl border-8 border-white/10">
+                <video 
+                  autoPlay 
+                  muted 
+                  loop 
+                  playsInline
+                  className="w-full aspect-video object-cover"
+                >
+                  <source src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-d2eaac15-1cf9-4362-b13a-04d777a840a5.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
