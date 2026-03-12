@@ -286,19 +286,26 @@ export default function App() {
                 Investir na SmartWash é investir em um negócio com alto potencial de retorno. Nossos franqueados têm experimentado um crescimento consistente, com um retorno sobre o investimento em média de 18 a 24 meses. No curto prazo, os franqueados podem esperar uma margem de lucro de 50% a 60%, e no longo prazo, a estabilidade e o crescimento são garantidos.
               </p>
             </div>
-            <div className="relative">
-              <div className="section-rounded overflow-hidden shadow-2xl border-8 border-white">
-                <video 
-                  autoPlay 
-                  muted 
-                  loop 
-                  playsInline
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="relative"
+            >
+              <motion.div 
+                animate={{ y: [0, -15, 0] }}
+                transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+                className="section-rounded overflow-hidden shadow-2xl border-8 border-white"
+              >
+                <img 
+                  src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura%20de%20tela%202026-03-11%20222613.png" 
+                  alt="Investimento SmartWash"
                   className="w-full aspect-square object-cover"
-                >
-                  <source src="https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/grok-video-3a0a1927-f826-45f2-b16b-79c31d1f4429.mp4" type="video/mp4" />
-                </video>
-              </div>
-            </div>
+                  referrerPolicy="no-referrer"
+                />
+              </motion.div>
+            </motion.div>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -424,7 +431,7 @@ export default function App() {
               {
                 title: "Condomínios e Hotéis",
                 desc: "Aproveite os baixos custos operacionais em áreas privadas.",
-                img: "https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/WhatsApp%20Image%202026-03-07%20at%207.23.42%20PM%20(2).jpeg"
+                img: "https://skzfezsseuyqgzbdapng.supabase.co/storage/v1/object/public/meeeeee/Captura%20de%20tela%202026-03-11%20222547.png"
               },
               {
                 title: "Postos 24h",
